@@ -26,6 +26,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
     }
     
+
+    
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        
@@ -86,6 +88,34 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return UIEdgeInsetsMake(0, 0, 0, 0)
     }
     
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+//        let pageHeight = customCollectionView.bounds.size.height
+//        let videoLength = CGFloat(videoArray.count)
+//
+//        let minSpace:CGFloat = 10
+//        
+//        var cellToSwipe = (scrollView.contentOffset.y) / (pageHeight + minSpace) + 0.5
+//        if cellToSwipe < 0 {
+//            cellToSwipe = 0
+//        }
+//        else if (cellToSwipe >= videoLength){
+//            cellToSwipe = videoLength - 1
+//        }
+//        let p = Int(cellToSwipe)
+//        let roundedIP = round(Double(Int(cellToSwipe)))
+//        let ip = IndexPath(row: Int(roundedIP), section: 0)
+        
+//        let ip = IndexPath(row: 2, section: 0)
+//        view.layoutIfNeeded()
+//        customCollectionView.scrollToItem(at: ip, at: UICollectionViewScrollPosition.centeredVertically, animated: true)
+        
+        let point = CGPoint(x: 50, y: 600)
+        customCollectionView.setContentOffset(point, animated: true)
+        
+    }
+
+
     
 //    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
 //        
@@ -143,6 +173,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
             layout.invalidateLayout()
         }
+
+        
+//        let ip = IndexPath(row: 2, section: 0)
+//        
+//        view.layoutIfNeeded()
+//        customCollectionView.scrollToItem(at: ip, at: UICollectionViewScrollPosition.centeredVertically, animated: true)
     }
 
 }
