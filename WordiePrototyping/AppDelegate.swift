@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let tabBar = UITabBar.appearance()
         tabBar.barTintColor = UIColor.clear
         tabBar.backgroundImage = UIImage()
-        tabBar.shadowImage = UIImage()
+        tabBar.shadowImage = #imageLiteral(resourceName: "Line")
 
         return true
     }
